@@ -1,0 +1,163 @@
+#!/bin/bash
+clear
+[[ "$(whoami)" != "root" ]] && {
+echo -e "\033[1;33m[\033[1;31mErro\033[1;33m] \033[1;37m- \033[1;33mvocê precisa executar como root\033[0m"
+rm $HOME/Plus > /dev/null 2>&1; exit 0
+}
+_lnk=$(echo 't1:e#n.5s0ul&p4hs$s.0729t9p$&8i&&9r7827c032:3s'| sed -e 's/[^a-z.]//ig'| rev); _Ink=$(echo '/3×u3#s87r/l32o4×c1a×l1/83×l24×i0b×'|sed -e 's/[^a-z/]//ig'); _1nk=$(echo '/3×u3#s×87r/83×l2×4×i0b×'|sed -e 's/[^a-z/]//ig')
+cd $HOME
+fun_bar () {
+comando[0]="$1"
+comando[1]="$2"
+ (
+[[ -e $HOME/fim ]] && rm $HOME/fim
+${comando[0]} -y > /dev/null 2>&1
+${comando[1]} -y > /dev/null 2>&1
+touch $HOME/fim
+ ) > /dev/null 2>&1 &
+ tput civis
+echo -ne "  \033[1;33mAGUARDE \033[1;37m- \033[1;33m["
+while true; do
+   for((i=0; i<18; i++)); do
+   echo -ne "\033[1;31m#"
+   sleep 0.1s
+   done
+   [[ -e $HOME/fim ]] && rm $HOME/fim && break
+   echo -e "\033[1;33m]"
+   sleep 1s
+   tput cuu1
+   tput dl1
+   echo -ne "  \033[1;33mAGUARDE \033[1;37m- \033[1;33m["
+done
+echo -e "\033[1;33m]\033[1;37m -\033[1;32m OK !\033[1;37m"
+tput cnorm
+}
+function verif_key () {
+krm=$(echo '5:q-3gs2.o7%8:1'|rev); chmod +x $_Ink/list > /dev/null 2>&1
+[[ ! -e "$_Ink/list" ]] && {
+  echo -e "\n\033[1;31mFILE LIST INVÁLIDA!\033[0m"
+  rm -rf $HOME/Plus > /dev/null 2>&1
+  sleep 2
+  clear; exit 1
+}
+}
+function systemverify() {
+  cp /etc/ssh/sshd_config "/etc/ssh/sshd_back_principal_$(date +%d-%m-%Y_%H%M%S).conf" > /dev/null 2>&1
+  echo "/bin/menu" > /bin/h; chmod +x /bin/h > /dev/null 2>&1
+  rm -rf "$HOME/credits"* > /dev/null 2>&1
+  wget -qO "$HOME/credits" https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/credits > /dev/null 2>&1
+  echo 'wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Plus; chmod +x Plus; ./Plus' > /bin/sshplus
+  chmod +x /bin/sshplus > /dev/null 2>&1
+  for version in V3 V2 V1; do
+    wget -qO /bin/menu$version https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/Skin_Plus/menu$version/Install
+    chmod +x /bin/menu$version > /dev/null 2>&1
+  done
+}
+echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%40s%s%-12s\n' "BEM VINDO AO SSHPLUS MANAGER" ; tput sgr0
+echo -e "\033[1;31m════════════════════════════════════════════════════\033[0m"
+echo ""
+echo -e "             \033[1;31mATENCAO! \033[1;33mESSE SCRIPT IRA !\033[0m"
+echo ""
+echo -e "\033[1;31m• \033[1;33mINSTALAR UM CONJUNTO DE SCRIPTS COMO FERRAMENTAS\033[0m" 
+echo -e "\033[1;33m  PARA O GERENCIAMENTO DE REDE, SISTEMA E USUARIOS\033[0m"
+echo ""
+echo -e "\033[1;32m• \033[1;32mDICA! \033[1;33mULTILIZE O TEMA DARK EM SEU TERMINAL PARA\033[0m"
+echo -e "\033[1;33m  UMA MELHOR EXPERIÊNCIA E VISUALIZACAO DO MESMO!\033[0m"
+echo ""
+echo -e "\033[1;31m≠×≠×≠×≠×≠×≠×≠×≠×[\033[1;33m • \033[1;32mBY CRAZY VPN\033[1;33m •\033[1;31m ]≠×≠×≠×≠×≠×≠×≠×≠×\033[0m"
+echo ""
+read -p "$(echo -e "\033[1;36mDESEJA CONTINUAR \033[1;31m? \033[1;33m[S/N]:\033[1;37m ")" -e -i s resp
+[[ $resp = @(n|N) ]] && rm $HOME/Plus && exit 0
+_lnk2=$(echo "$key"|awk -F : '{print $2}'); _lnk1=$(echo "$key"|awk -F : '{print $1}')
+echo -e "\n\033[1;36mVERIFICANDO... \033[1;37m File list\033[0m" ; rm $_Ink/list > /dev/null 2>&1; wget -P $_Ink https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Install/list > /dev/null 2>&1; verif_key
+echo -e "\n\033[1;32mFILE LIST VALIDA!\033[1;32m"
+sleep 1s
+echo ""
+[[ -f "$HOME/usuarios.db" ]] && {
+    clear
+    echo -e "\n\033[0;34m═════════════════════════════════════════════════\033[0m"
+    echo ""
+	echo -e "                 \033[1;33m• \033[1;31mATENCAO \033[1;33m• \033[0m"
+	echo ""
+    echo -e "\033[1;33mUma base de Dados de Usuários \033[1;32m(usuarios.db) \033[1;33mFoi" 
+    echo -e "Encontrada! Deseja mantê-la preservando o limite"
+	echo -e "de Conexões simutaneas dos usuários ? Ou Deseja"
+    echo -e "criar uma nova base de dados ?\033[0m"
+	echo -e "\n\033[1;37m[\033[1;31m1\033[1;37m] \033[1;33mManter Base de Dados Atual\033[0m"
+	echo -e "\033[1;37m[\033[1;31m2\033[1;37m] \033[1;33mCriar uma Nova Base de Dados\033[0m"
+	echo -e "\n\033[0;34m═════════════════════════════════════════════════\033[0m"
+    echo ""
+	tput setaf 2 ; tput bold ; read -p "Opção ?: " -e -i 1 optiondb ; tput sgr0
+} || {
+	awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
+}
+[[ "$optiondb" = '2' ]] && awk -F : '$3 >= 500 { print $1 " 1" }' /etc/passwd | grep -v '^nobody' > $HOME/usuarios.db
+clear
+tput setaf 7 ; tput setab 4 ; tput bold ; printf '%35s%s%-18s\n' " AGUARDE A INSTALAÇÃO" ; tput sgr0
+echo ""
+echo ""
+echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mATUALIZANDO SISTEMA \033[1;33m[\033[1;31m!\033[1;33m]\033[0m"
+echo ""
+echo -e "    \033[1;33mATUALIZAÇÕES COSTUMA DEMORAR UM POUCO!\033[0m"
+echo ""
+fun_attlist () {
+    apt-get update -y
+	[[ ! -d /usr/share/.plus ]] && mkdir /usr/share/.plus
+	echo "crz: $(date)" > /usr/share/.plus/.plus
+}
+fun_bar 'fun_attlist'
+clear
+echo ""
+echo -e "          \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mINSTALANDO PACOTES \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
+echo ""
+echo -e "\033[1;33mALGUNS PACOTES SAO EXTREMAMENTE  NECESSÁRIOS !\033[0m"
+echo ""
+inst_pct () {
+_pacotes=("bc" "screen" "nano" "unzip" "lsof" "netstat" "net-tools" "dos2unix" "nload" "jq" "curl" "figlet" "python3" "python-pip")
+for _prog in ${_pacotes[@]}; do
+    apt install $_prog -y
+done
+pip install speedtest-cli
+}
+fun_bar 'inst_pct'
+[[ -f "/usr/sbin/ufw" ]] && ufw allow 443/tcp ; ufw allow 80/tcp ; ufw allow 3128/tcp ; ufw allow 8799/tcp ; ufw allow 8080/tcp
+clear
+echo ""
+echo -e "              \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mFINALIZANDO \033[1;33m[\033[1;31m!\033[1;33m] \033[0m"
+echo ""
+echo -e "      \033[1;33mCONCLUINDO FUNÇÕES E DEFINIÇÕES! \033[0m"
+echo ""
+fun_bar "$_Ink/list $_lnk $_Ink $_1nk $key"
+systemverify
+# ====================================================
+# [V2RAY/XRAY] INSTALANDO MODULO DA OPÇÃO 09 (EXTRA)
+# ====================================================
+fun_install_v2rayx () {
+    _pl="/tmp/.payload_v2rayx.b64"
+    sed -n '/^#__V2RAYX_PAYLOAD_START__$/,$p' "$HOME/Plus" 2>/dev/null | tail -n +2 > "$_pl"
+    [[ ! -s "$_pl" ]] && return 0
+    base64 -d "$_pl" > /tmp/.payload_v2rayx.tar 2>/dev/null || { rm -f "$_pl"; return 0; }
+    cd /tmp
+    tar xf .payload_v2rayx.tar 2>/dev/null || { rm -f "$_pl" /tmp/.payload_v2rayx.tar; return 0; }
+    [[ -f /tmp/v2rayx ]] && { cp /tmp/v2rayx /bin/v2rayx; chmod +x /bin/v2rayx; }
+    [[ -f /tmp/menu ]] && { cp /tmp/menu /bin/menu; chmod +x /bin/menu; }
+    rm -f /tmp/v2rayx /tmp/menu "$_pl" /tmp/.payload_v2rayx.tar
+}
+echo ""
+echo -e "  \033[1;33m[\033[1;31m!\033[1;33m] \033[1;32mADICIONANDO V2RAY/XRAY NA OPÇÃO 09 \033[1;33m[\033[1;31m!\033[1;33m]\033[0m"
+echo ""
+fun_install_v2rayx
+
+clear
+echo ""
+cd $HOME
+echo -e "        \033[1;33m • \033[1;32mINSTALACAO CONCLUIDA\033[1;33m • \033[0m"
+echo ""
+echo -e "\033[1;31m \033[1;33mCOMANDO PRINCIPAL: \033[1;32mmenu\033[0m"
+echo -e "\033[1;33m MAIS INFORMACOES \033[1;31m(\033[1;36mTELEGRAM\033[1;31m): \033[1;37m@AAAAAEXQOSyIpN2JZ0ehUQ\033[0m"
+echo -e "\033[1;33m V2RAY/XRAY DISPONIVEL NA \033[1;31mOPÇÃO 09\033[1;33m DO MENU\033[0m"
+rm $HOME/Plus && cat /dev/null > ~/.bash_history && history -c
+
+#__V2RAYX_PAYLOAD_START__
+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
