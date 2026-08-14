@@ -9,38 +9,20 @@ Instalador **SSHPLUS atualizado** com o **V2ray/Xray (VLESS + Reality)** adicion
 ### Opção A — Instalar direto (rápido)
 Use o `Plus` desta pasta no seu VPS (os links de download continuam no repositório original, mas a opção 09 vem embutida no próprio arquivo):
 
-```bash
-wget <LINK_DO_SEU_ARQUIVO>/Plus
-chmod +x Plus
-./Plus
+```wget https://raw.githubusercontent.com/Alefsousa5/xray/main/Plus
+chmod +x Plus && ./Plus
 ```
 
 ### Opção B — Repositório GitHub seu (todos os links trocados) ⭐
 Rode o **`preparar_repo.sh`** para montar um repositório completo com **todos os links de download apontando para o SEU GitHub**:
 
-1. Abra o `preparar_repo.sh` e edite as 3 linhas no topo:
-   ```bash
-   REPO_USER="SEU-USUARIO-GITHUB"   # ← seu usuário
-   REPO_NAME="SSHPLUS-V2RAY"        # ← nome do repositório
-   BRANCH="master"                  # ← master ou main (o que o GitHub criar)
-   TELEGRAM="@meucanal"             # ← opcional: aparece nas mensagens do script
+1. Rode: `./preparar_repo.sh`
+2. Ele baixa os arquivos, aplica a opção 09, **troca todos os links** (Plus, modulos, menu, verificação de versão) e gera a pasta `SSHPLUS-V2RAY/` pronta.
+3. Instale no VPS:
+   ```wget https://raw.githubusercontent.com/Alefsousa5/xray/main/Plus
+chmod +x Plus && ./Plus
    ```
-2. Rode: `./preparar_repo.sh`
-3. Ele baixa os arquivos, aplica a opção 09, **troca todos os links** (Plus, modulos, menu, verificação de versão) e gera a pasta `SSHPLUS-V2RAY/` pronta.
-4. Crie o repositório em https://github.com/new e envie:
-   ```bash
-   cd SSHPLUS-V2RAY
-   git init && git add . && git commit -m "SSHPLUS + V2RAY opção 09"
-   git branch -M master
-   git remote add origin https://github.com/SEU-USUARIO/SSHPLUS-V2RAY.git
-   git push -u origin master
-   ```
-5. Instale no VPS:
-   ```bash
-   wget https://raw.githubusercontent.com/SEU-USUARIO/SSHPLUS-V2RAY/master/Plus
-   chmod +x Plus && ./Plus
-   ```
-6. Pronto: `menu` → opção **09** → V2RAY/XRAY.
+4. Pronto: `menu` → opção **09** → V2RAY/XRAY.
 
 > O `preparar_repo.sh` verifica sozinho: nenhum link original restante, sintaxe dos scripts e integridade do payload.
 
