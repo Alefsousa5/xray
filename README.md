@@ -4,7 +4,22 @@ Instalador **SSHPLUS atualizado** com o **V2ray/Xray (VLESS + Reality)** adicion
 
 ---
 
-## 🎯 DUAS FORMAS DE USAR
+## 🚀 INSTALADOR GERAL (recomendado)
+
+Uma única linha abre o menu de instalação — tudo é baixado do **seu repositório**:
+
+```bash <(curl -sL https://raw.githubusercontent.com/Alefsousa5/xray/main/instalador.sh)
+```
+
+| Opção | Instala |
+|-------|---------|
+| 01 | **SSHPLUS completo + XRAY** (menu principal, opção 09) |
+| 02 | **Só o XRAY** (standalone, sem SSHPLUS) |
+| 00 | Sair |
+
+---
+
+## 🎯 TRÊS FORMAS DE USAR
 
 ### Opção A — Instalar direto (rápido)
 Use o `Plus` desta pasta no seu VPS (os links de download continuam no repositório original, mas a opção 09 vem embutida no próprio arquivo):
@@ -26,6 +41,16 @@ chmod +x Plus && ./Plus
 
 > O `preparar_repo.sh` verifica sozinho: nenhum link original restante, sintaxe dos scripts e integridade do payload.
 
+### Opção C — Só o XRAY, standalone (uma linha) ⭐
+Sem SSHPLUS, só o **módulo XRAY** (VLESS + Reality/WebSocket) direto do seu repositório:
+
+```bash <(curl -sL https://raw.githubusercontent.com/Alefsousa5/xray/main/xray.sh)
+```
+
+Ele baixa o `xray.zip` do seu GitHub, instala o módulo em `/usr/local/lib/sshplus-xray/`,
+cria o atalho **`xray`** (rode de novo quando quiser: atualiza do GitHub e abre o menu)
+e, se o SSHPLUS estiver instalado, integra o XRAY no `menu` (opção 31).
+
 ---
 
 ## 🎛️ Módulo v2rayx (opção 09) — funcionalidades
@@ -42,6 +67,23 @@ chmod +x Plus && ./Plus
 | 08 | **ATUALIZAR CORE XRAY** |
 | 09 | **REMOVER XRAY** |
 | 00 | Voltar ao menu |
+
+## 📟 Módulo XRAY standalone (`xray.sh`) — menu
+
+| Opção | Função |
+|-------|--------|
+| 01 | **INSTALAR / REINSTALAR XRAY** — VLESS + WebSocket **ou** VLESS + TCP + Reality (porta, SNI/path configuráveis) |
+| 02 | **CRIAR USUARIO XRAY** — gera UUID + link de compartilhamento |
+| 03 | **REMOVER USUARIO** |
+| 04 | **USUARIOS + LINKS** |
+| 05 | **ALTERAR PORTA** |
+| 06 | **REINICIAR SERVICO** |
+| 07 | **STATUS / LOGS** |
+| 08 | **DESINSTALAR XRAY** |
+| 00 | Sair |
+
+> O Xray roda via `systemd` (`xray.service`), config em `/usr/local/etc/xray/config.json`.
+> Rode `xray` em qualquer momento para atualizar o módulo do GitHub e reabrir o menu.
 
 ---
 
@@ -68,7 +110,9 @@ vless://UUID@IP:PORTA?encryption=none&flow=xtls-rprx-vision&security=reality&sni
 
 | Arquivo | Descrição |
 |---------|-----------|
+| `instalador.sh` | **Instalador geral do repositório (uma linha, menu 01/02)** |
 | `Plus` | Instalador único (opção 09 embutida) |
+| `xray.sh` | **Instalador standalone do XRAY via GitHub (uma linha)** |
 | `preparar_repo.sh` | **Gera seu repositório GitHub com todos os links trocados** |
 | `Modulos/v2rayx` | Módulo V2RAY/XRAY (fonte) |
 | `Install/Skin_Plus/menuV3/menu` | Menu com a opção 09 (fonte) |
