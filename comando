@@ -5,6 +5,13 @@ apt-get upgrade -y;
 wget https://raw.githubusercontent.com/AAAAAEXQOSyIpN2JZ0ehUQ/SSHPLUS-MANAGER-FREE/master/Plus; 
 chmod +x Plus* && ./Plus
 
-com xray : 
+com xray (SSHPLUS completo, opcao 09): 
 
 wget https://raw.githubusercontent.com/Alefsousa5/xray/main/Plus; chmod +x Plus; ./Plus
+
+com xray (standalone, uma linha — baixa do meu GitHub): 
+
+bash <(curl -sL https://raw.githubusercontent.com/Alefsousa5/xray/main/xray.sh)
+
+# depois, para abrir/atualizar o menu xray de novo:
+xray
