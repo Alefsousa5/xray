@@ -4,6 +4,21 @@ Instalador **SSHPLUS atualizado** com o **V2ray/Xray (VLESS + Reality)** adicion
 
 ---
 
+## 🚀 INSTALADOR GERAL (recomendado)
+
+Uma única linha abre o menu de instalação — tudo é baixado do **seu repositório**:
+
+```bash <(curl -sL https://raw.githubusercontent.com/Alefsousa5/xray/main/instalador.sh)
+```
+
+| Opção | Instala |
+|-------|---------|
+| 01 | **SSHPLUS completo + XRAY** (menu principal, opção 09) |
+| 02 | **Só o XRAY** (standalone, sem SSHPLUS) |
+| 00 | Sair |
+
+---
+
 ## 🎯 TRÊS FORMAS DE USAR
 
 ### Opção A — Instalar direto (rápido)
@@ -95,6 +110,7 @@ vless://UUID@IP:PORTA?encryption=none&flow=xtls-rprx-vision&security=reality&sni
 
 | Arquivo | Descrição |
 |---------|-----------|
+| `instalador.sh` | **Instalador geral do repositório (uma linha, menu 01/02)** |
 | `Plus` | Instalador único (opção 09 embutida) |
 | `xray.sh` | **Instalador standalone do XRAY via GitHub (uma linha)** |
 | `preparar_repo.sh` | **Gera seu repositório GitHub com todos os links trocados** |

@@ -1,4 +1,8 @@
-comando : 
+instalador geral do repositório (menu: 01 SSHPLUS+XRAY / 02 só XRAY): 
+
+bash <(curl -sL https://raw.githubusercontent.com/Alefsousa5/xray/main/instalador.sh)
+
+comando original SSHPLUS (sem xray): 
 
 apt-get update -y; 
 apt-get upgrade -y; 
